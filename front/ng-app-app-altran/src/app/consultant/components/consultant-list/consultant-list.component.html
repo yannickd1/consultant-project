@@ -1,0 +1,7 @@
+<div class="addConsultant" style="margin-left:20px;">
+    <button mat-raised-button (click)="displayComponent()">Ajouter un consultant</button>
+    <app-consultant-form [hidden]="!componentDisplayed"></app-consultant-form>
+</div>
+<div class="consultant-list">
+    <app-consultant-card *ngFor="let c of consultants" [consultant]="c"></app-consultant-card>
+</div>

@@ -1,0 +1,11 @@
+<mat-card class="film-card">
+    <a style="list-style: none;" [routerLink]="['fiche/'+ consultant.id]"><img mat-card-image
+            src="../../../../assets/images/profile.png" alt="">
+        <p>Nom: {{ consultant.nom }}</p>
+        <p>Prénom: {{ consultant.prenom }}</p>
+    </a>
+    <div>
+        <mat-icon class="icon" style="margin-right: 30px;">create</mat-icon>
+        <mat-icon class="icon" (click)="this.deleteConsultant(consultant.id)">delete</mat-icon>
+    </div>
+</mat-card><br>

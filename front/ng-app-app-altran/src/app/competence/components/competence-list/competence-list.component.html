@@ -1,0 +1,11 @@
+<div style="margin-top: 20px; margin-left: 20px;">
+    <button mat-raised-button style="margin-top: 20px;margin-left: 20px; width: 100px; height: 48px;"
+        [routerLink]="['']">
+        <mat-icon class="arrowBack">arrow_back</mat-icon>
+    </button>
+    <app-competence-form></app-competence-form>
+    <h1>Liste des compétences</h1>
+    <div class="">
+        <app-competence-card *ngFor="let c of competences" [competence]="c"></app-competence-card>
+    </div>
+</div>

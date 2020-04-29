@@ -1,0 +1,38 @@
+img {
+    width: 200px;
+    height: 200px;
+}
+
+mat-card {
+    width: 200px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.buttonFiche {
+    width: 200px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.buttonFiche:hover {
+    background-color: #B2B1B0;
+    animation: fadeIn 1.2s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.icon:hover {
+    color: #B2B1B0
+}

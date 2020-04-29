@@ -1,0 +1,9 @@
+<form [formGroup]="consultantForm" (ngSubmit)="saveConsultant()">
+    <mat-form-field>
+        <input matInput placeholder="nom" name="nom" formControlName="nom">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="prenom" name="prenom" formControlName="prenom">
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!consultantForm.valid">Ajouter</button>
+</form>

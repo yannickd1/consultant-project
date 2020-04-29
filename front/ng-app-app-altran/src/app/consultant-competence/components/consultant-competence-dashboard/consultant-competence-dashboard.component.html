@@ -1,0 +1,52 @@
+<!-- <app-consultant-competence-list></app-consultant-competence-list> -->
+<button mat-raised-button style="margin-top: 20px;margin-left: 20px; width: 100px; height: 48px;" [routerLink]="['']">
+    <mat-icon class="arrowBack">arrow_back</mat-icon>
+</button>
+
+<h1>Liste des compétences de l'équipe</h1>
+
+<!-- <form>
+    <mat-form-field [formGroup]="consultantCompetenceForm" (ngSubmit)="loadTeamSkills()">
+        <mat-label>Compétence</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let c of consultantCompetences" [value]="c.competence.id">
+                {{c.competence.nom}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Niveau</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let c of consultantCompetences" [value]="c.niveau.id">
+                {{c.niveau.niveau}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Filtrer</button>
+</form> -->
+<form>
+    <mat-form-field [formGroup]="consultantCompetenceForm" (ngSubmit)="loadTeamSkills()">
+        <mat-label>Compétence</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let c of competence" [value]="c.id">
+                {{c.nom}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Niveau</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let n of niveau" [value]="n.id">
+                {{n.niveau}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Filtrer</button>
+</form>
+
+
+<div class="" style="margin-left: 20px;">
+
+    <app-consultant-competence-card *ngFor="let c of consultantCompetences" [consultantCompetence]="c">
+    </app-consultant-competence-card>
+</div>

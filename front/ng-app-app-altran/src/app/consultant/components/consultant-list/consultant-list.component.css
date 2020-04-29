@@ -1,0 +1,8 @@
+.consultant-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 20px;
+
+}

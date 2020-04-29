@@ -1,0 +1,21 @@
+<h2>Ajouter compétences</h2>
+<form [formGroup]="consultantCompetenceForm" (ngSubmit)="saveConsultantCompetence()">
+    <mat-form-field formGroupName="competence">
+        <mat-label>Compétence</mat-label>
+        <mat-select name="id" formControlName="id">
+            <mat-option *ngFor="let c of competence" [value]="c.id">
+                {{c.id}} {{ c.nom}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field formGroupName="niveau">
+        <mat-label>Niveau</mat-label>
+        <mat-select name="id" formControlName="id">
+            <mat-option *ngFor="let n of niveau" [value]="n.id">
+                {{n.id}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary"
+        [disabled]="!consultantCompetenceForm.valid">Ajouter</button>
+</form>

@@ -1,0 +1,11 @@
+<mat-list>
+    <mat-list-item>
+        <span style="font-weight: bold; margin-right: 5px;">{{ competence.nom}}</span>
+        <p>{{ competence.description }}</p>
+        Type:
+        <span style="font-weight: bold;margin-left: 5px;">{{ competence.typeCompetence.libelle }}</span>
+        <a (click)="this.deleteCompetence(competence.id)">
+            <mat-icon class="icon">delete</mat-icon>
+        </a>
+    </mat-list-item>
+</mat-list>

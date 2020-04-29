@@ -1,0 +1,10 @@
+img {
+    width: 200px;
+    height: 200px;
+}
+
+mat-card {
+    width: 200px;
+    text-align: center;
+    margin-right: 30px;
+}

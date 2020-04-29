@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-button [matMenuTriggerFor]="menu">
+            <h1>Menu</h1>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['']">Accueil</button>
+            <button mat-menu-item [routerLink]="['team-skills']">Liste des compétences de l'équipe</button>
+            <button mat-menu-item [routerLink]="['liste-competence']">Compétences</button>
+            <button mat-menu-item [routerLink]="['addType']">Types de compétences</button>
+
+            <!-- <button mat-menu-item [routerLink]="['competence-form']">Ajouter compétences</button> -->
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>

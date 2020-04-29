@@ -1,0 +1,16 @@
+<div style="margin-left: 20px; margin-top: 20px;">
+    <button mat-raised-button style="margin-top: 20px;margin-left: 20px; width: 100px; height: 48px;"
+        [routerLink]="['']">
+        <mat-icon class="arrowBack">arrow_back</mat-icon>
+    </button>
+    <h1>Ajouter un type de compétence</h1>
+
+    <form [formGroup]="typeCompetenceForm" (ngSubmit)="saveTypeCompetence()">
+        <mat-form-field>
+            <input matInput placeholder="libelle" name="libelle" formControlName="libelle">
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary" [disabled]="!typeCompetenceForm.valid">Ajouter</button>
+    </form>
+
+    <app-type-competence-dashboard></app-type-competence-dashboard>
+</div>

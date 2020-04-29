@@ -1,0 +1,14 @@
+<button mat-raised-button style="margin-top: 20px;margin-left: 20px; width: 100px; height: 48px;" [routerLink]="['']">
+    <mat-icon class="arrowBack">arrow_back</mat-icon>
+</button>
+<div *ngIf="consultant" style="margin-top: 50px; margin-left: 20px;">
+    <mat-card class="fiche-consultant">
+        <img mat-card-image src="../../../../assets/images/profile.png" alt="">
+        <p>Nom: {{ consultant.nom }}</p>
+        <p>Prénom: {{ consultant.prenom }}</p>
+    </mat-card><br>
+
+
+    <app-consultant-competence-form></app-consultant-competence-form>
+    <app-consultant-competence-list></app-consultant-competence-list>
+</div>

@@ -1,0 +1,8 @@
+<mat-list-item>
+    <span style="font-weight: bold;">{{ consultantCompetence.competence.nom }}</span>
+    Niveau:{{consultantCompetence.niveau.niveau }}
+
+    <a (click)="this.deleteConsultantCompetence(consultantCompetence.id)">
+        <mat-icon class="icon">delete</mat-icon>
+    </a>
+</mat-list-item>

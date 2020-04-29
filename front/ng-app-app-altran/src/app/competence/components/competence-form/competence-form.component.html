@@ -1,0 +1,18 @@
+<h1>Ajouter une compétence</h1>
+<form [formGroup]="competenceForm" (ngSubmit)="saveCompetence()">
+    <mat-form-field>
+        <input matInput placeholder="nom" name="nom" formControlName="nom">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="description" name="description" formControlName="description">
+    </mat-form-field>
+    <mat-form-field formGroupName="typeCompetence">
+        <mat-label>Type de Compétence</mat-label>
+        <mat-select name="id" formControlName="id">
+            <mat-option *ngFor="let t of typeCompetence" [value]="t.id">
+                {{t.id}} {{ t.libelle}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!competenceForm.valid">Ajouter</button>
+</form>
